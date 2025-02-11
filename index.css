@@ -1,0 +1,203 @@
+:root {
+  --font-primary: "Poppins", serif;
+  --font-secondary: "Carter One", serif;
+  --color-extralight: #fff;
+  --color-light: #f2eee8;
+  --color-medium: #ada499;
+  --color-semibold: #013220;
+  --color-bold: #1b130e;
+  --color-extrabold: #000000;
+  --color-highlight: #e86100;
+  --color-success: #02a402;
+  --color-error: #ff0000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-bold);
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p,
+a,
+input,
+button,
+label,
+select,
+textarea,
+ul,
+label {
+  font-size: 1.6rem;
+}
+
+input,
+textarea {
+  color: var(--color-bold);
+  font-family: var(--font-primary);
+}
+
+input,
+textarea,
+select {
+  border-radius: 0.75rem;
+}
+
+textarea {
+  resize: none;
+}
+
+p {
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-style: none;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  outline: 3px solid var(--color-extrabold);
+  transition: 0.2s;
+}
+
+.directional-btn-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.next-btn,
+.back-btn,
+.option-btn {
+  border-radius: 5rem;
+  color: var(--color-extralight);
+  padding: 2rem 3rem;
+}
+
+.next-btn {
+  background-color: var(--color-semibold);
+  margin: 6rem 0rem 1rem 0rem;
+}
+
+.back-btn {
+  background-color: var(--color-medium);
+  color: var(--color-extralight);
+  margin: 6rem 0rem 1rem 0rem;
+}
+
+.option-btn {
+  background-color: var(--color-highlight);
+  margin: 0rem;
+}
+
+li {
+  font-weight: 400;
+  list-style: none;
+}
+
+img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+input {
+  border: 0.1rem solid var(--color-bold);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input:focus {
+  outline: 2px solid var(--color-highlight);
+  transition: 0.2s;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
