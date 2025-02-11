@@ -8,7 +8,7 @@ export default function Header() {
           <div className="logo-container">
             <img
               className="scissor-icon"
-              src="public/assets/icons/scissor.svg"
+              src="/assets/icons/scissor.svg"
               alt="Scissor icon"
             />
             <div className="logo">GoodDog </div>
