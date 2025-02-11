@@ -18,7 +18,7 @@ export default function Services() {
     <>
       <div className="services-container">
         <h1>Choose a service</h1>
-        <div className="services-selection">{services}</div>
+        <form className="services-form">{services}</form>
         <div className="services directional-btn-container">
           <Link to="/">
             <button className="services back-btn">Back</button>

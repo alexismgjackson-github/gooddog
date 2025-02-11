@@ -18,7 +18,7 @@ export default function BreedType() {
     <>
       <div className="breedtype-container">
         <h1>Select a breed type</h1>
-        <div className="breedtype-selection">{dogBreedTypes}</div>
+        <form className="breedtype-form">{dogBreedTypes}</form>
         <div className="breedtype directional-btn-container">
           <Link to="/services">
             <button className="breedtype next-btn">Next</button>

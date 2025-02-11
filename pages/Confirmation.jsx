@@ -9,12 +9,9 @@ export default function Confirmation() {
     lastName: "",
     email: "",
     message: "",
+    date: "",
   });
 
-  const [firstNameMessage, setFirstNameMessage] = useState("");
-  const [lastNameMessage, setLastNameMessage] = useState("");
-  const [petNameMessage, setPetNameMessage] = useState("");
-  const [emailMessage, setEmailMessage] = useState("");
   const [isValid, setIsValid] = useState(null);
 
   function handleChange(event) {
@@ -27,27 +24,12 @@ export default function Confirmation() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    if (formData.firstName.length > 0) {
-      // console.log("First name is valid");
-      setFullNameMessage("Full name successfully submitted!");
-      formData.firstName = "";
-      setIsValid(true);
-    }
-
-    if (formData.lastName.length > 0) {
-      // console.log("First name is valid");
-      setFullNameMessage("Full name successfully submitted!");
-      formData.lastName = "";
-      setIsValid(true);
-    }
-
-    if (formData.email.length > 0) {
-      // console.log("Email is valid");
-      setEmailMessage("Email successfully submitted!");
-      formData.email = "";
-      setIsValid(true);
-    }
+    setIsValid(true);
+    formData.firstName = "";
+    formData.lastName = "";
+    formData.petName = "";
+    formData.email = "";
+    formData.date = "";
   }
 
   const { scrollToTop } = useContext(ScrollContext);
@@ -60,15 +42,6 @@ export default function Confirmation() {
         <h1>Confirm your booking</h1>
         <form className="confirmation-form" onClick={handleSubmit}>
           <label htmlFor="">Owner's First Name (required)</label>
-          {firstNameMessage && (
-            <span
-              className={`contact-message ${
-                isValid == true ? "contact-success" : "contact-error"
-              }`}
-            >
-              {firstNameMessage}
-            </span>
-          )}
           <input
             type="text"
             placeholder="First Name"
@@ -80,15 +53,6 @@ export default function Confirmation() {
             required
           />
           <label htmlFor="">Owner's Last Name (required)</label>
-          {lastNameMessage && (
-            <span
-              className={`contact-message ${
-                isValid == true ? "contact-success" : "contact-error"
-              }`}
-            >
-              {lastNameMessage}
-            </span>
-          )}
           <input
             type="text"
             placeholder="Last Name"
@@ -100,35 +64,17 @@ export default function Confirmation() {
             required
           />
           <label htmlFor="">Pet's Name (required)</label>
-          {petNameMessage && (
-            <span
-              className={`contact-message ${
-                isValid == true ? "contact-success" : "contact-error"
-              }`}
-            >
-              {petNameMessage}
-            </span>
-          )}
           <input
             type="text"
-            placeholder="Pet Name"
+            placeholder="Pet's Name"
             onChange={handleChange}
-            name="lastName"
+            name="petName"
             value={formData.petName}
             className="contact-form-input"
             spellCheck="false"
             required
           />
           <label htmlFor="">Email Address (required)</label>
-          {emailMessage && (
-            <span
-              className={`contact-message ${
-                isValid == true ? "contact-success" : "contact-error"
-              }`}
-            >
-              {emailMessage}
-            </span>
-          )}
           <input
             type="text"
             placeholder="Email Address"
@@ -140,12 +86,19 @@ export default function Confirmation() {
             spellCheck="false"
             required
           />
+          <label htmlFor="">Appointment Date (required)</label>
+          <input
+            type="date"
+            name="appointmentDate"
+            id="appointmentDate"
+            required
+          />
         </form>
         <div className="confirmation directional-btn-container">
           <Link to="/moreinfo">
             <button className="confirmation back-btn">Back</button>
           </Link>
-          <Link to="/receipt">
+          <Link to="/nextsteps">
             <button type="submit" className="confirmation next-btn">
               Next
             </button>

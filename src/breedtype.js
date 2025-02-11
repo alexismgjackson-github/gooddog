@@ -3,13 +3,13 @@ export default [
     id: 1,
     name: "Herding Group",
     examples: "german shepherd, border collie, pembroke welsh corgi",
-    url: "/assets/images/herding.jpg",
+    url: "./assets/images/herding.jpg",
   },
   {
     id: 2,
     name: "Hound Group",
     examples: "afghan hound, dachshund, greyhound",
-    url: "/assets/images/hound.jpg",
+    url: "./assets/images/hound.jpg",
   },
   {
     id: 3,

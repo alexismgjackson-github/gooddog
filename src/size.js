@@ -21,12 +21,12 @@ export default [
     id: 5,
     name: "X-Large",
     weight: "Up to 70-80 lbs",
-    price: 5,
+    price: 10,
   },
   {
     id: 6,
     name: "XX-Large",
     weight: "Over 80 lbs",
-    price: 10,
+    price: 15,
   },
 ];

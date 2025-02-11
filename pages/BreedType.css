@@ -4,7 +4,7 @@
   padding: 1.5rem;
 }
 
-.breedtype-selection {
+.breedtype-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -23,7 +23,7 @@
   .breedtype-container {
     padding: 2rem;
   }
-  .breedtype-selection {
+  .breedtype-form {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -33,7 +33,7 @@
   .breedtype-container {
     padding: 3rem;
   }
-  .breedtype-selection {
+  .breedtype-form {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

@@ -10,10 +10,14 @@
   transition: 0.2s;
 }
 
+.breed-icon {
+  width: 2.4rem;
+}
+
 .breed-type-card p {
   font-size: 1.3rem;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Extra small devices (phones, 600px and down) */

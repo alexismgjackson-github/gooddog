@@ -61,7 +61,6 @@ input,
 button,
 label,
 select,
-textarea,
 ul,
 label {
   font-size: 1.6rem;
@@ -74,13 +73,24 @@ textarea {
 }
 
 input,
-textarea,
 select {
   border-radius: 0.75rem;
 }
 
-textarea {
-  resize: none;
+input {
+  border: 0.1rem solid var(--color-bold);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input:focus {
+  outline: 2px solid var(--color-highlight);
+  transition: 0.2s;
+}
+
+input[type="radio"] {
+  margin: 0;
+  opacity: 0;
 }
 
 p {
@@ -88,25 +98,23 @@ p {
   line-height: 2.8rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover,
 button:hover {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-}
-
-button {
+button,
+.age-label,
+.size-label,
+.coat-label {
   border-style: none;
   font-weight: 500;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-}
-
-button:hover {
-  cursor: pointer;
-  outline: 3px solid var(--color-extrabold);
   transition: 0.2s;
 }
 
@@ -118,7 +126,8 @@ button:hover {
 
 .next-btn,
 .back-btn,
-.option-btn {
+.option-btn,
+.pseudo-btn {
   border-radius: 5rem;
   color: var(--color-extralight);
   padding: 2rem 3rem;
@@ -135,9 +144,10 @@ button:hover {
   margin: 6rem 0rem 1rem 0rem;
 }
 
-.option-btn {
+.pseudo-btn {
   background-color: var(--color-highlight);
   margin: 0rem;
+  text-align: center;
 }
 
 li {
@@ -148,17 +158,6 @@ li {
 img {
   border-radius: 1rem;
   width: 100%;
-}
-
-input {
-  border: 0.1rem solid var(--color-bold);
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-input:focus {
-  outline: 2px solid var(--color-highlight);
-  transition: 0.2s;
 }
 
 .show {

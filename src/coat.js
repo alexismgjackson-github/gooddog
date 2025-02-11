@@ -15,17 +15,17 @@ export default [
     price: 5,
   },
   {
-    id: 5,
+    id: 4,
     name: "Silky",
     price: 5,
   },
   {
-    id: 6,
+    id: 5,
     name: "Wired",
     price: 5,
   },
   {
-    id: 7,
+    id: 6,
     name: "Hairless",
     price: 0,
   },

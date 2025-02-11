@@ -3,7 +3,17 @@ import "./CoatCard.css";
 export default function CoatCard(coat) {
   return (
     <>
-      <button className="coat option-btn">{coat.name}</button>
+      <div className="pseudo-btn">
+        <label className="coat-label">{coat.name}</label>
+        <input
+          type="radio"
+          name="coat-radio"
+          id={coat.id}
+          value={coat.name}
+          /*checked={selectedValue === `${dog.name}`}*/
+          /*onChange={handleChange}*/
+        />
+      </div>
     </>
   );
 }

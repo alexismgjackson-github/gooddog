@@ -10,17 +10,23 @@
   transition: 0.2s;
 }
 
+.service-card-header {
+  align-items: center;
+  display: flex;
+}
+
 .service-card h2 {
   font-style: italic;
+}
+
+.service-icon {
+  margin-left: 0.5rem;
+  width: 2.4rem;
 }
 
 .service-card span {
   font-size: 1.4rem;
   font-style: italic;
-}
-
-.service-card p {
-  margin-top: 1rem;
 }
 
 /* Extra small devices (phones, 600px and down) */
