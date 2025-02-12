@@ -15,8 +15,8 @@
   font-weight: 500;
 }
 
-.confirmation.next-btn {
-  margin-top: 2rem;
+input[type="tel"] {
+  background-color: var(--color-extralight);
 }
 
 /* Extra small devices (phones, 600px and down) */

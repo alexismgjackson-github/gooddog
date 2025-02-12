@@ -2,7 +2,7 @@
   --font-primary: "Poppins", serif;
   --font-secondary: "Carter One", serif;
   --color-extralight: #fff;
-  --color-light: #f2eee8;
+  --color-light: hsl(36, 28%, 90%);
   --color-medium: #ada499;
   --color-semibold: #013220;
   --color-bold: #1b130e;
@@ -132,6 +132,7 @@ button,
   display: flex;
   gap: 2rem;
   justify-content: center;
+  margin: 3rem 0rem 2rem 0rem;
 }
 
 .next-btn,
@@ -144,13 +145,11 @@ button,
 
 .next-btn {
   background-color: var(--color-semibold);
-  margin: 4rem 0rem 1rem 0rem;
 }
 
 .back-btn {
   background-color: var(--color-medium);
   color: var(--color-extralight);
-  margin: 4rem 0rem 1rem 0rem;
 }
 
 .pseudo-btn {

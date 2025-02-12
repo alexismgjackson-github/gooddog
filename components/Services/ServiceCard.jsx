@@ -28,8 +28,8 @@ export default function ServiceCard(service) {
                 name="service-radio"
                 id={service.id}
                 value={service.name}
-                checked={selectedValue === `${service.name}`}
                 onChange={handleRadioChange}
+                required
               />
             </div>
           </div>
