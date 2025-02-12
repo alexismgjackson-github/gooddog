@@ -96,6 +96,7 @@ input:focus {
 }
 
 input[type="radio"] {
+  display: none;
   margin: 0;
   opacity: 0;
 }
@@ -138,7 +139,7 @@ button,
 .pseudo-btn {
   border-radius: 5rem;
   color: var(--color-extralight);
-  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+  padding: 1.5rem 2.5rem;
 }
 
 .next-btn {
