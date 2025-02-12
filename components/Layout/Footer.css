@@ -1,5 +1,12 @@
 footer {
+  display: flex;
   padding: 2rem;
+  justify-content: center;
+}
+
+.copyright {
+  color: var(--color-medium);
+  font-size: 1.4rem;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -17,7 +17,7 @@ export default function Services() {
   return (
     <>
       <div className="services-container">
-        <h1>
+        <h1 className="animate__animated animate__flipInX">
           Choose a service <span className="required">(required)</span>
         </h1>
         <form className="services-form">{services}</form>

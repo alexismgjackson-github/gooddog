@@ -1,7 +1,13 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./BreedTypeCard.css";
 
 export default function BreedTypeCard(dog) {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
   return (
     <>
       <label>
@@ -10,8 +16,12 @@ export default function BreedTypeCard(dog) {
             <h2>{dog.name}</h2>
             <img src={dog.url} alt={dog.name} />
             <div className="pseudo-btn">
-              <label className="pseudo-btn-label" htmlFor={dog.id}>
-                Select
+              <label
+                className="pseudo-btn-label"
+                htmlFor={dog.id}
+                onClick={handleToggle}
+              >
+                {isToggled ? "Unselect" : "Select"}
               </label>
               <input
                 type="radio"

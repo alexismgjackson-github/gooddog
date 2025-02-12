@@ -3,6 +3,12 @@ import { useState } from "react";
 import "./ServiceCard.css";
 
 export default function ServiceCard(service) {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
   const [selectedValue, setSelectedValue] = useState("");
 
   const handleRadioChange = (event) => {
@@ -19,9 +25,9 @@ export default function ServiceCard(service) {
             <h3>Starts at ${service.price}</h3>
             <p>{service.description}</p>
             <p>(Approx {service.duration})</p>
-            <div className="pseudo-btn">
+            <div className="pseudo-btn" onClick={handleToggle}>
               <label className="pseudo-btn-label" htmlFor={service.id}>
-                Select
+                {isToggled ? "Unselect" : "Select"}
               </label>
               <input
                 type="radio"

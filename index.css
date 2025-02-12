@@ -29,35 +29,29 @@ html:focus-within {
 
 body {
   background-color: var(--color-light);
-  color: var(--color-bold);
   font-family: var(--font-primary);
 }
 
 h1,
 h2,
 h3 {
+  color: var(--color-bold);
   font-family: var(--font-primary);
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 h1 {
   font-size: 2.8rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
-}
-
-h2,
-h3 {
-  font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-style: italic;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 p,
@@ -67,8 +61,24 @@ button,
 label,
 select,
 ul,
-label {
+label,
+span {
+  color: var(--color-bold);
   font-size: 1.6rem;
+}
+
+p {
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
 }
 
 input,
@@ -103,23 +113,10 @@ input[type="radio"]:hover {
   outline: 2px solid var(--color-medium);
 }
 
-p {
-  font-weight: 400;
-  line-height: 2.8rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover,
-button:hover {
-  cursor: pointer;
-}
-
 button,
 .pseudo-btn-label {
   border-style: none;
+  color: var(--color-extralight);
   font-weight: 500;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
@@ -147,7 +144,6 @@ button,
 
 .back-btn {
   background-color: var(--color-medium);
-  color: var(--color-extralight);
 }
 
 .pseudo-btn {
@@ -157,7 +153,6 @@ button,
 }
 
 .pseudo-btn:hover {
-  background-color: var(--color-extrabold);
   cursor: pointer;
 }
 
@@ -178,35 +173,8 @@ img {
   margin-left: 0.5rem;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  h1 {
-    font-size: 3.2rem;
-    margin-bottom: 3rem;
-  }
-
-  h2 {
-    font-size: 2.6rem;
-  }
-
-  h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+.bold {
+  color: var(--color-highlight);
+  font-style: italic;
+  font-weight: 600;
 }

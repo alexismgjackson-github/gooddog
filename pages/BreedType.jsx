@@ -45,7 +45,7 @@ export default function BreedType() {
   return (
     <>
       <div className="breedtype-container">
-        <h1>
+        <h1 className="animate__animated animate__flipInX">
           Select a breed type <span className="required">(required)</span>
         </h1>
         <form className="breedtype-form" /*onSubmit={handleSubmit}*/>

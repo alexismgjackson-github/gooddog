@@ -44,7 +44,7 @@ export default function Confirmation() {
   return (
     <>
       <div className="confirmation-container">
-        <h1>Confirm booking</h1>
+        <h1 className="animate__animated animate__flipInX">Confirm booking</h1>
         <form className="confirmation-form" onSubmit={handleSubmit}>
           <label htmlFor="">
             Owner's First Name <span className="required">(required)</span>
@@ -103,13 +103,15 @@ export default function Confirmation() {
             Phone Number <span className="required">(required)</span>
           </label>
           <input
-            type="tel"
+            type="text"
             placeholder="123-123-1234"
             onChange={handleChange}
             name="phone"
             value={formData.phone}
             className="contact-form-input"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            minLength={10}
+            maxLength={10}
+            pattern="^[0-9]+$"
             spellCheck="false"
             required
           />
