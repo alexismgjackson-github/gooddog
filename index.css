@@ -138,18 +138,18 @@ button,
 .pseudo-btn {
   border-radius: 5rem;
   color: var(--color-extralight);
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
 }
 
 .next-btn {
   background-color: var(--color-semibold);
-  margin: 6rem 0rem 1rem 0rem;
+  margin: 4rem 0rem 1rem 0rem;
 }
 
 .back-btn {
   background-color: var(--color-medium);
   color: var(--color-extralight);
-  margin: 6rem 0rem 1rem 0rem;
+  margin: 4rem 0rem 1rem 0rem;
 }
 
 .pseudo-btn {
@@ -195,12 +195,12 @@ img {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 3rem;
   }
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
   h3 {

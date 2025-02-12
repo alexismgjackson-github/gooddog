@@ -11,7 +11,7 @@ export default function Header() {
               src="/assets/icons/scissor.svg"
               alt="Scissor icon"
             />
-            <div className="logo">GoodDog </div>
+            <div className="logo">GoodDog</div>
           </div>
         </nav>
       </header>

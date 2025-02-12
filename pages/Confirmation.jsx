@@ -44,7 +44,7 @@ export default function Confirmation() {
   return (
     <>
       <div className="confirmation-container">
-        <h1>Confirm your booking</h1>
+        <h1>Confirm booking</h1>
         <form className="confirmation-form" onSubmit={handleSubmit}>
           <label htmlFor="">
             Owner's First Name <span className="required">(required)</span>
