@@ -2,14 +2,12 @@
   --font-primary: "Poppins", serif;
   --font-secondary: "Carter One", serif;
   --color-extralight: #fff;
-  --color-light: hsl(36, 28%, 90%);
+  --color-light: #ede7de;
   --color-medium: #ada499;
   --color-semibold: #013220;
   --color-bold: #1b130e;
   --color-extrabold: #000000;
   --color-highlight: #e86100;
-  --color-success: #02a402;
-  --color-error: #ff0000;
 }
 
 *,
