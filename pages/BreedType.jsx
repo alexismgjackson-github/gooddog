@@ -1,11 +1,23 @@
 import data from "../src/breedtype.js";
 import BreedTypeCard from "../components/BreedType/BreedTypeCard.jsx";
-import { Link, useNavigate } from "react-router";
-import { useContext, useState } from "react";
+import { Link /*useNavigate*/ } from "react-router";
+import { useContext /*useState*/ } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import "./BreedType.css";
 
 export default function BreedType() {
+  const dogBreedTypes = data.map((dog) => {
+    return (
+      <BreedTypeCard
+        key={dog.id}
+        {...dog}
+        // selectedValue={selectedValue}
+        // handleRadioChange={handleRadioChange}
+      />
+    );
+  });
+
+  /*
   const [selectedValue, setSelectedValue] = useState("");
 
   const [isValid, setIsValid] = useState(null);
@@ -15,28 +27,20 @@ export default function BreedType() {
     console.log(event.target.value);
   };
 
-  const dogBreedTypes = data.map((dog) => {
-    return (
-      <BreedTypeCard
-        key={dog.id}
-        {...dog}
-        selectedValue={selectedValue}
-        handleRadioChange={handleRadioChange}
-      />
-    );
-  });
+
 
   function handleSubmit(event) {
     event.preventDefault();
     setIsValid(true);
     navigate(`/services`);
   }
+  */
 
   const { scrollToTop } = useContext(ScrollContext);
 
   scrollToTop();
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <>
@@ -44,7 +48,7 @@ export default function BreedType() {
         <h1>
           Select a breed type <span className="required">(required)</span>
         </h1>
-        <form className="breedtype-form" onSubmit={handleSubmit}>
+        <form className="breedtype-form" /*onSubmit={handleSubmit}*/>
           {dogBreedTypes}
         </form>
         <div className="breedtype directional-btn-container">

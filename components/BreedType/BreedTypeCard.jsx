@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import "./BreedTypeCard.css";
 
-export default function BreedTypeCard(dog, selectedValue, handleRadioChange) {
+export default function BreedTypeCard(dog) {
   return (
     <>
       <label>
@@ -18,7 +18,6 @@ export default function BreedTypeCard(dog, selectedValue, handleRadioChange) {
                 name="breedtype-radio"
                 id={dog.id}
                 value={dog.name}
-                onChange={handleRadioChange}
                 required
               />
             </div>
