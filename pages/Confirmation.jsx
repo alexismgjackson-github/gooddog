@@ -10,11 +10,10 @@ export default function Confirmation() {
     petName: "",
     email: "",
     date: "",
+    phone: "",
   });
 
   const [isValid, setIsValid] = useState(null);
-
-  const [currentDate, setCurrentDate] = useState(new Date());
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -32,6 +31,7 @@ export default function Confirmation() {
     formData.petName = "";
     formData.email = "";
     formData.date = "";
+    formData.phone = "";
     navigate(`/nextsteps`);
   }
 
@@ -100,13 +100,26 @@ export default function Confirmation() {
             required
           />
           <label htmlFor="">
+            Phone Number <span className="required">(required)</span>
+          </label>
+          <input
+            type="tel"
+            placeholder="123-123-1234"
+            onChange={handleChange}
+            name="phone"
+            value={formData.phone}
+            className="contact-form-input"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            spellCheck="false"
+            required
+          />
+          <label htmlFor="">
             Appointment Date <span className="required">(required)</span>
           </label>
           <input
             type="date"
             name="appointmentDate"
             id="appointmentDate"
-            min={currentDate.toLocaleString()}
             required
           />
           <button className="confirmation next-btn">Submit</button>
