@@ -134,7 +134,6 @@ button,
 .back-btn,
 .pseudo-btn {
   border-radius: 5rem;
-  color: var(--color-extralight);
   padding: 1.25rem 2.5rem;
 }
 
