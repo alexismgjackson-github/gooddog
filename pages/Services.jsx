@@ -17,13 +17,15 @@ export default function Services() {
   return (
     <>
       <div className="services-container">
-        <h1>Choose a service</h1>
+        <h1>
+          Choose a service <span className="required">(required)</span>
+        </h1>
         <form className="services-form">{services}</form>
         <div className="services directional-btn-container">
           <Link to="/">
             <button className="services back-btn">Back</button>
           </Link>
-          <Link to="/moreinfo">
+          <Link to="/confirmation">
             <button className="services next-btn">Next</button>
           </Link>
         </div>

@@ -1,26 +1,27 @@
+// import { useState } from "react";
 import "./BreedTypeCard.css";
 
-export default function BreedTypeCard(dog) {
-  /*const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };*/
-
+export default function BreedTypeCard(dog, onChange, selectedValue) {
   return (
     <>
       <label>
         <div className="breed-type-card-container">
           <div className="breed-type-card">
             <h2>{dog.name}</h2>
-            <p>(e.g. {dog.examples})</p>
             <img src={dog.url} alt={dog.name} />
-            <input
-              type="radio"
-              name="breedtype-radio"
-              id={dog.id}
-              value={dog.name}
-              /*checked={selectedValue === `${dog.name}`}*/
-              /*onChange={handleChange}*/
-            />
+            <div className="pseudo-btn">
+              <label className="pseudo-btn-label" htmlFor={dog.id}>
+                Select
+              </label>
+              <input
+                type="radio"
+                name="breedtype-radio"
+                id={dog.id}
+                value={dog.name}
+                /*checked={selectedValue === `${dog.name}`}*/
+                onChange={onChange}
+              />
+            </div>
           </div>
         </div>
       </label>

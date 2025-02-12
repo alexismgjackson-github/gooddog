@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useContext, useState } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import "./Confirmation.css";
@@ -7,12 +7,14 @@ export default function Confirmation() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    petName: "",
     email: "",
-    message: "",
     date: "",
   });
 
   const [isValid, setIsValid] = useState(null);
+
+  const [currentDate, setCurrentDate] = useState(new Date());
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -30,18 +32,23 @@ export default function Confirmation() {
     formData.petName = "";
     formData.email = "";
     formData.date = "";
+    navigate(`/nextsteps`);
   }
 
   const { scrollToTop } = useContext(ScrollContext);
 
   scrollToTop();
 
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="confirmation-container">
         <h1>Confirm your booking</h1>
-        <form className="confirmation-form" onClick={handleSubmit}>
-          <label htmlFor="">Owner's First Name (required)</label>
+        <form className="confirmation-form" onSubmit={handleSubmit}>
+          <label htmlFor="">
+            Owner's First Name <span className="required">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="First Name"
@@ -52,7 +59,9 @@ export default function Confirmation() {
             spellCheck="false"
             required
           />
-          <label htmlFor="">Owner's Last Name (required)</label>
+          <label htmlFor="">
+            Owner's Last Name <span className="required">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="Last Name"
@@ -63,7 +72,9 @@ export default function Confirmation() {
             spellCheck="false"
             required
           />
-          <label htmlFor="">Pet's Name (required)</label>
+          <label htmlFor="">
+            Pet's Name <span className="required">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="Pet's Name"
@@ -74,7 +85,9 @@ export default function Confirmation() {
             spellCheck="false"
             required
           />
-          <label htmlFor="">Email Address (required)</label>
+          <label htmlFor="">
+            Email Address <span className="required">(required)</span>
+          </label>
           <input
             type="text"
             placeholder="Email Address"
@@ -86,22 +99,21 @@ export default function Confirmation() {
             spellCheck="false"
             required
           />
-          <label htmlFor="">Appointment Date (required)</label>
+          <label htmlFor="">
+            Appointment Date <span className="required">(required)</span>
+          </label>
           <input
             type="date"
             name="appointmentDate"
             id="appointmentDate"
+            min={currentDate.toLocaleString()}
             required
           />
+          <button className="confirmation next-btn">Submit</button>
         </form>
         <div className="confirmation directional-btn-container">
-          <Link to="/moreinfo">
+          <Link to="/services">
             <button className="confirmation back-btn">Back</button>
-          </Link>
-          <Link to="/nextsteps">
-            <button type="submit" className="confirmation next-btn">
-              Next
-            </button>
           </Link>
         </div>
       </div>

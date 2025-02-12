@@ -19,9 +19,8 @@
   font-style: italic;
 }
 
-.service-icon {
-  margin-left: 0.5rem;
-  width: 2.4rem;
+.service-card p {
+  margin-top: 1rem;
 }
 
 .service-card span {

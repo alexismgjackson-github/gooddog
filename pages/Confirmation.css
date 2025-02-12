@@ -10,6 +10,15 @@
   gap: 1rem;
 }
 
+.confirmation-container label {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.confirmation.next-btn {
+  margin-top: 2rem;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }

@@ -1,3 +1,20 @@
+.next-steps-container {
+  background-color: var(--color-extralight);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.next-steps-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.next-steps-container label {
+  font-style: italic;
+  font-weight: 500;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }

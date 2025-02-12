@@ -4,11 +4,11 @@
   padding: 1.5rem;
 }
 
-.breed-type-card:hover {
+/*.breed-type-card:hover {
   cursor: pointer;
   outline: 2px solid var(--color-medium);
   transition: 0.2s;
-}
+}*/
 
 .breed-icon {
   width: 2.4rem;
