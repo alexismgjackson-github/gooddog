@@ -6,6 +6,7 @@ import "./Confirmation.css";
 
 export default function Confirmation() {
   const { updateFormData } = useContext(FormContext);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [dogName, setDogName] = useState("");

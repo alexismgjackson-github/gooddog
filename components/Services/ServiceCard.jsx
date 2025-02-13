@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { RadioContext } from "../../Context/radio";
 import "./ServiceCard.css";
 
 export default function ServiceCard(service) {
-  const [selectedValue, setSelectedValue] = useState("");
+  const { updateServicesRadioValue } = useContext(RadioContext);
 
-  const handleRadioChange = (event) => {
-    setSelectedValue(event.target.value);
-    console.log(event.target.value);
+  const handleChange = (event) => {
+    updateServicesRadioValue(event.target.value);
   };
-
   return (
     <>
       <label>
@@ -20,7 +19,7 @@ export default function ServiceCard(service) {
                 name="service-radio"
                 id={service.id}
                 value={service.name}
-                onChange={handleRadioChange}
+                onChange={handleChange}
                 required
               />
               <h2>{service.name}</h2>

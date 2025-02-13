@@ -2,10 +2,13 @@ import { Link } from "react-router";
 import { useState, useContext } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import { FormContext } from "../Context/form.jsx";
+import { RadioContext } from "../Context/radio.jsx";
 import "./NextSteps.css";
 
 export default function NextSteps() {
   const { formData } = useContext(FormContext);
+
+  const { breedTypeRadioValue, servicesRadioValue } = useContext(RadioContext);
 
   const imageUrls = [
     "/assets/images/randomURL1.jpg",
@@ -66,7 +69,8 @@ export default function NextSteps() {
           <h3>Booking Summary</h3>
           <ul className="next-steps-list">
             <li>
-              Dog's Name: <span className="bold highlight">{formData.dogName}</span>
+              Dog's Name:{" "}
+              <span className="bold highlight">{formData.dogName}</span>
             </li>
             <li>
               Owner's Name:{" "}
@@ -75,10 +79,12 @@ export default function NextSteps() {
               </span>
             </li>
             <li>
-              Breed Type: <span className="bold highlight">*BREEDTYPE*</span>
+              Breed Type:{" "}
+              <span className="bold highlight">{breedTypeRadioValue}</span>
             </li>
             <li>
-              Service: <span className="bold highlight">*SERVICE*</span>
+              Service:{" "}
+              <span className="bold highlight">{servicesRadioValue}</span>
             </li>
             <li>
               Est. Hourly Base Rate:{" "}
@@ -98,7 +104,7 @@ export default function NextSteps() {
             </li>
           </ul>
           <p>
-            Hello {formData.firstName}. Thank you for booking with us today!
+            Hello {formData.firstName}! Thank you for booking with us today!
             <span className="bold"> Gooddog Grooming Services</span> will follow
             up with you via email or text to schedule a
             <span className="bold"> FREE 15-min Discovery Call.</span>

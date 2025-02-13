@@ -8,7 +8,7 @@ import Confirmation from "../pages/Confirmation";
 import NextSteps from "../pages/NextSteps";
 import { ScrollProvider } from "../Context/scroll";
 import { FormProvider } from "../Context/form";
-// import { RadioProvider } from "../Context/radio";
+import { RadioProvider } from "../Context/radio";
 
 function App() {
   return (
@@ -29,10 +29,12 @@ function App() {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FormProvider>
-      <ScrollProvider>
-        <App />
-      </ScrollProvider>
-    </FormProvider>
+    <RadioProvider>
+      <FormProvider>
+        <ScrollProvider>
+          <App />
+        </ScrollProvider>
+      </FormProvider>
+    </RadioProvider>
   </StrictMode>
 );

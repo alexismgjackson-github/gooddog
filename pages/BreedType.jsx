@@ -1,11 +1,18 @@
 import data from "../src/breedtype.js";
 import BreedTypeCard from "../components/BreedType/BreedTypeCard.jsx";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useContext } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
+// import { RadioContext } from "../Context/radio.jsx";
 import "./BreedType.css";
 
 export default function BreedType() {
+  /*const { updateBreedTypeRadioValue } = useContext(RadioContext);
+
+  const handleChange = (event) => {
+    updateBreedTypeRadioValue(event.target.value);
+  };*/
+
   const dogBreedTypes = data.map((dog) => {
     return <BreedTypeCard key={dog.id} {...dog} />;
   });
@@ -20,6 +27,8 @@ export default function BreedType() {
   const { scrollToTop } = useContext(ScrollContext);
 
   scrollToTop();
+
+  // console.log(updateBreedTypeRadioValue);
 
   return (
     <>

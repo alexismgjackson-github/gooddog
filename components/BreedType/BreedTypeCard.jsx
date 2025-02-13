@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { RadioContext } from "../../Context/radio";
 import "./BreedTypeCard.css";
 
 export default function BreedTypeCard(dog) {
-  const [selectedValue, setSelectedValue] = useState("");
+  const { updateBreedTypeRadioValue } = useContext(RadioContext);
 
-  const handleRadioChange = (event) => {
-    setSelectedValue(event.target.value);
-    console.log(event.target.value);
+  const handleChange = (event) => {
+    updateBreedTypeRadioValue(event.target.value);
   };
 
   return (
@@ -20,7 +20,7 @@ export default function BreedTypeCard(dog) {
                 name="breedtype-radio"
                 id={dog.id}
                 value={dog.name}
-                onChange={handleRadioChange}
+                onChange={handleChange}
                 required
               />
               <div className="breed-type-body">
