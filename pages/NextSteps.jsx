@@ -61,24 +61,24 @@ export default function NextSteps() {
         </h1>
         <div className="next-steps">
           <ul className="next-steps-list">
-            <li>Dog's Name:</li>
-            <li>Breed Type:</li>
-            <li>Service:</li>
-            <li>Est. Hourly Base Rate:</li>
+            <li>Dog's Name: *DOGNAME*</li>
+            <li>Breed Type: *BREEDTYPE*</li>
+            <li>Service: *SERVICE*</li>
+            <li>Est. Hourly Base Rate: *PRICE*</li>
           </ul>
           <p>
-            Hello *OWNER NAME*. Thank you for booking with us today!
+            Hello *OWNERNAME*. Thank you for booking with us today!
             <span className="bold"> Gooddog Grooming Services</span> will follow
             up with you via email or text to schedule a
             <span className="bold"> FREE 15-min Discovery Call.</span>
           </p>
           <p>
-            We want to learn more about *PETNAME* (e.g. temperament, medical
+            We want to learn more about *DOGNAME* (e.g. temperament, medical
             history, physical condition, favorite treats) so we can provide them
             with the <span className="bold">best tailored service.</span>
           </p>
           <p>
-            We look forward to speaking with you and meeting *PETNAME* very
+            We look forward to speaking with you and meeting *DOGNAME* very
             soon!
           </p>
           <div className="random-dog-container">
