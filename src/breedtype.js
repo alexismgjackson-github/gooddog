@@ -2,12 +2,12 @@ export default [
   {
     id: 1,
     name: "Herding",
-    url: "./assets/images/herding.jpg",
+    url: "/assets/images/herding.jpg",
   },
   {
     id: 2,
     name: "Hound",
-    url: "./assets/images/hound.jpg",
+    url: "/assets/images/hound.jpg",
   },
   {
     id: 3,

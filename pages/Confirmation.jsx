@@ -1,37 +1,23 @@
 import { Link, useNavigate } from "react-router";
 import { useContext, useState } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
+import { FormContext } from "../Context/form.jsx";
 import "./Confirmation.css";
 
 export default function Confirmation() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    dogName: "",
-    email: "",
-    date: "",
-    phone: "",
-  });
+  const { updateFormData } = useContext(FormContext);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [dogName, setDogName] = useState("");
+  const [email, setEmail] = useState("");
+  const [apptDate, setApptDate] = useState("");
+  const [phone, setPhone] = useState("");
 
-  const [isValid, setIsValid] = useState(null);
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  }
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
-    setIsValid(true);
-    formData.firstName = "";
-    formData.lastName = "";
-    formData.dogName = "";
-    formData.email = "";
-    formData.date = "";
-    formData.phone = "";
+    updateFormData({ firstName, lastName, dogName, email, apptDate, phone });
     navigate(`/nextsteps`);
   }
 
@@ -39,89 +25,96 @@ export default function Confirmation() {
 
   scrollToTop();
 
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="confirmation-container">
         <h1 className="animate__animated animate__flipInX">Confirm booking</h1>
         <form className="confirmation-form" onSubmit={handleSubmit}>
-          <label htmlFor="">
+          <label htmlFor="firstName">
             Owner's First Name <span className="required">(required)</span>
           </label>
           <input
             type="text"
             placeholder="First Name"
-            onChange={handleChange}
+            value={firstName}
+            onChange={(event) => setFirstName(event.target.value)}
             name="firstName"
-            value={formData.firstName}
+            id="firstName"
             className="contact-form-input"
             spellCheck="false"
             required
           />
-          <label htmlFor="">
+          <label htmlFor="lastName">
             Owner's Last Name <span className="required">(required)</span>
           </label>
           <input
             type="text"
             placeholder="Last Name"
-            onChange={handleChange}
+            value={lastName}
+            onChange={(event) => setLastName(event.target.value)}
             name="lastName"
-            value={formData.lastName}
+            id="lastName"
             className="contact-form-input"
             spellCheck="false"
             required
           />
-          <label htmlFor="">
+          <label htmlFor="dogName">
             Dog's Name <span className="required">(required)</span>
           </label>
           <input
             type="text"
             placeholder="Dog's Name"
-            onChange={handleChange}
+            value={dogName}
+            onChange={(event) => setDogName(event.target.value)}
             name="dogName"
-            value={formData.dogName}
+            id="dogName"
             className="contact-form-input"
             spellCheck="false"
             required
           />
-          <label htmlFor="">
+          <label htmlFor="email">
             Email Address <span className="required">(required)</span>
           </label>
           <input
             type="text"
             placeholder="Email Address"
-            onChange={handleChange}
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             name="email"
-            value={formData.email}
+            id="email"
             className="contact-form-input"
             pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
             spellCheck="false"
+            autoComplete="off"
             required
           />
-          <label htmlFor="">
+          <label htmlFor="phone">
             Phone Number <span className="required">(required)</span>
           </label>
           <input
             type="text"
-            placeholder="123-123-1234"
-            onChange={handleChange}
+            placeholder="Phone Number"
+            value={phone}
+            onChange={(event) => setPhone(event.target.value)}
             name="phone"
-            value={formData.phone}
+            id="phone"
             className="contact-form-input"
             minLength={10}
             maxLength={10}
             pattern="^[0-9]+$"
             spellCheck="false"
+            autoComplete="off"
             required
           />
-          <label htmlFor="">
+          <label htmlFor="apptDate">
             Appointment Date <span className="required">(required)</span>
           </label>
           <input
             type="date"
-            name="appointmentDate"
-            id="appointmentDate"
+            value={apptDate}
+            name="apptDate"
+            id="apptDate"
+            onChange={(event) => setApptDate(event.target.value)}
             required
           />
           <button type="submit" className="confirmation next-btn">

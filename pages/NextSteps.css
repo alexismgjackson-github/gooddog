@@ -22,14 +22,15 @@
   gap: 2rem;
 }
 
+.next-steps h3 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
 .next-steps-list {
   display: grid;
   gap: 0.5rem;
   font-style: italic;
-}
-
-.next-steps-list li {
-  font-weight: 500;
 }
 
 .random-dog-container {
