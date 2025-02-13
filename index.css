@@ -76,8 +76,7 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-button:hover {
+a:hover {
   cursor: pointer;
 }
 
@@ -118,11 +117,17 @@ button {
   transition: 0.25s;
 }
 
+button:hover,
+button:focus {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
 .directional-btn-container {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 2rem 0rem 1rem 0rem;
 }
 
 .back-btn {

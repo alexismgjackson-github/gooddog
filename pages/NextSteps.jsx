@@ -66,11 +66,11 @@ export default function NextSteps() {
           <h3>Booking Summary</h3>
           <ul className="next-steps-list">
             <li>
-              Dog's Name: <span className="bold">{formData.dogName}</span>
+              Dog's Name: <span className="bold highlight">{formData.dogName}</span>
             </li>
             <li>
               Owner's Name:{" "}
-              <span className="bold">
+              <span className="bold highlight">
                 {formData.firstName} {formData.lastName}
               </span>
             </li>
