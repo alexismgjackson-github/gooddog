@@ -25,6 +25,11 @@ export default function NextSteps() {
     "/public/assets/images/randomURL18.jpg",
     "/public/assets/images/randomURL19.jpg",
     "/public/assets/images/randomURL20.jpg",
+    "/public/assets/images/randomURL21.jpg",
+    "/public/assets/images/randomURL22.jpg",
+    "/public/assets/images/randomURL23.jpg",
+    "/public/assets/images/randomURL24.jpg",
+    "/public/assets/images/randomURL25.jpg",
   ];
 
   const [imageSource, setImageSource] = useState("");
@@ -41,15 +46,29 @@ export default function NextSteps() {
   return (
     <>
       <div className="next-steps-container">
-        <h1 className="animate__animated animate__flipInX">Next Steps</h1>
+        <h1 className="animate__animated animate__flipInX">
+          Next Steps{" "}
+          <img
+            src="public/assets/icons/paw.svg"
+            alt="Paw icon"
+            className="next-steps-icon"
+          />
+          <img
+            src="public/assets/icons/paw.svg"
+            alt="Paw icon"
+            className="next-steps-icon"
+          />
+        </h1>
         <div className="next-steps">
+          <ul className="next-steps-list">
+            <li>Dog's Name:</li>
+            <li>Breed Type:</li>
+            <li>Service:</li>
+            <li>Est. Hourly Base Rate:</li>
+          </ul>
           <p>
-            Congratulations *OWNER NAME* You've booked a SERVICE* for *PETNAME*
-            scheduled for *DATE*. The "*SERVICE*" of your *BREEDTYPE* dog will
-            be starting at *PRICE* an hour.
-          </p>
-          <p>
-            <span className="bold">Gooddog Grooming Services</span> will follow
+            Hello *OWNER NAME*. Thank you for booking with us today!
+            <span className="bold"> Gooddog Grooming Services</span> will follow
             up with you via email or text to schedule a
             <span className="bold"> FREE 15-min Discovery Call.</span>
           </p>

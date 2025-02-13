@@ -7,7 +7,7 @@ export default function Confirmation() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    petName: "",
+    dogName: "",
     email: "",
     date: "",
     phone: "",
@@ -28,7 +28,7 @@ export default function Confirmation() {
     setIsValid(true);
     formData.firstName = "";
     formData.lastName = "";
-    formData.petName = "";
+    formData.dogName = "";
     formData.email = "";
     formData.date = "";
     formData.phone = "";
@@ -73,14 +73,14 @@ export default function Confirmation() {
             required
           />
           <label htmlFor="">
-            Pet's Name <span className="required">(required)</span>
+            Dog's Name <span className="required">(required)</span>
           </label>
           <input
             type="text"
-            placeholder="Pet's Name"
+            placeholder="Dog's Name"
             onChange={handleChange}
             name="petName"
-            value={formData.petName}
+            value={formData.dogName}
             className="contact-form-input"
             spellCheck="false"
             required
@@ -124,7 +124,9 @@ export default function Confirmation() {
             id="appointmentDate"
             required
           />
-          <button className="confirmation next-btn">Submit</button>
+          <button type="submit" className="confirmation next-btn">
+            Submit
+          </button>
         </form>
         <div className="confirmation directional-btn-container">
           <Link to="/services">

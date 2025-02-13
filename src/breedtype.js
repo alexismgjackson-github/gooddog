@@ -1,42 +1,42 @@
 export default [
   {
     id: 1,
-    name: "Herding Type",
+    name: "Herding",
     url: "./assets/images/herding.jpg",
   },
   {
     id: 2,
-    name: "Hound Type",
+    name: "Hound",
     url: "./assets/images/hound.jpg",
   },
   {
     id: 3,
-    name: "Mixed Type",
+    name: "Mixed",
     url: "/assets/images/mixed.jpg",
   },
   {
     id: 4,
-    name: "Non-Sporting Type",
+    name: "Non-Sporting",
     url: "/assets/images/nonsporting.jpg",
   },
   {
     id: 5,
-    name: "Sporting Type",
+    name: "Sporting",
     url: "/assets/images/sporting.jpg",
   },
   {
     id: 6,
-    name: "Terrier Type",
+    name: "Terrier",
     url: "/assets/images/terrier.jpg",
   },
   {
     id: 7,
-    name: "Toy Type",
+    name: "Toy",
     url: "/assets/images/toy.jpg",
   },
   {
     id: 8,
-    name: "Working Type",
+    name: "Working",
     url: "/assets/images/working.jpg",
   },
 ];

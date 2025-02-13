@@ -4,14 +4,13 @@
   padding: 1.5rem;
 }
 
-.breed-type-card:hover {
-  cursor: pointer;
-  outline: 3px solid var(--color-medium);
-  transition: 0.2s;
+.breed-type-card h2 {
+  margin-left: 1.5rem;
 }
 
-.breed-icon {
-  width: 2.4rem;
+.breed-type-card-header {
+  align-items: center;
+  display: flex;
 }
 
 .breed-type-card p {

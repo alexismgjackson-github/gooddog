@@ -98,23 +98,16 @@ input {
   margin-bottom: 1.5rem;
 }
 
-input:focus {
+input[type="text"]:focus {
   outline: 2px solid var(--color-highlight);
   transition: 0.2s;
 }
 
 input[type="radio"] {
-  display: none;
-  margin: 0;
-  opacity: 0;
+  accent-color: var(--color-highlight);
 }
 
-input[type="radio"]:hover {
-  outline: 2px solid var(--color-medium);
-}
-
-button,
-.pseudo-btn-label {
+button {
   border-style: none;
   color: var(--color-extralight);
   font-weight: 500;
@@ -131,8 +124,7 @@ button,
 }
 
 .next-btn,
-.back-btn,
-.pseudo-btn {
+.back-btn {
   border-radius: 5rem;
   padding: 1.25rem 2.5rem;
 }
@@ -143,16 +135,6 @@ button,
 
 .back-btn {
   background-color: var(--color-medium);
-}
-
-.pseudo-btn {
-  background-color: var(--color-highlight);
-  margin: 4rem 0rem 0rem 0rem;
-  text-align: center;
-}
-
-.pseudo-btn:hover {
-  cursor: pointer;
 }
 
 li {
