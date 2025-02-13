@@ -45,16 +45,8 @@
 .surprise-me-btn {
   background-color: var(--color-bold);
   border-radius: 5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding: 1.25rem 2.5rem;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -77,8 +69,4 @@
   .random-dog-img {
     max-width: 50%;
   }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 }

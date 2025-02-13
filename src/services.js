@@ -1,26 +1,23 @@
 export default [
   {
     id: 1,
-    name: "Bath",
+    name: "Bath - Starting at $24",
     description:
       "Bath, nail trim, ear cleaning, paw & pad trim, sanitary trim, anal gland cleaning & more.",
-    price: 25,
     duration: "1 to 1.5 hrs",
   },
   {
     id: 2,
-    name: "Bath & Brush",
+    name: "Bath & Brush - Starting at $27",
     description:
       "Bath, nail trim, ear cleaning, paw & pad trim, sanitary trim, anal gland cleaning, brushing, blow-out & more.",
-    price: 30,
     duration: "1.5 to 2 hrs",
   },
   {
     id: 3,
-    name: "Bath, Brush & Cut",
+    name: "Bath, Brush & Cut - Starting at $30",
     description:
       "Bath, haircut, deshedding shampoo & solution, nail trim, ear cleaning, brushing, blow-out, sanitary trim & more.",
-    price: 35,
     duration: "2 to 4 hrs",
   },
 ];

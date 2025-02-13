@@ -24,7 +24,6 @@ export default function ServiceCard(service) {
               />
               <h2>{service.name}</h2>
             </div>
-            <h3>Starting at ${service.price}</h3>
             <p>{service.description}</p>
             <p>(Approx {service.duration})</p>
           </div>

@@ -117,8 +117,7 @@ button {
   transition: 0.25s;
 }
 
-button:hover,
-button:focus {
+button:hover {
   cursor: pointer;
   transform: scale(0.95);
 }

@@ -84,11 +84,9 @@ export default function NextSteps() {
             </li>
             <li>
               Service:{" "}
-              <span className="bold highlight">{servicesRadioValue}</span>
-            </li>
-            <li>
-              Est. Hourly Base Rate:{" "}
-              <span className="bold highlight">*PRICE*</span>
+              <span className="bold highlight">
+                {servicesRadioValue} an hour
+              </span>
             </li>
             <li>
               Phone Number:{" "}
