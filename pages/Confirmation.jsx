@@ -79,7 +79,7 @@ export default function Confirmation() {
             type="text"
             placeholder="Dog's Name"
             onChange={handleChange}
-            name="petName"
+            name="dogName"
             value={formData.dogName}
             className="contact-form-input"
             spellCheck="false"
