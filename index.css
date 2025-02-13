@@ -109,6 +109,7 @@ input[type="radio"] {
 }
 
 button {
+  border-radius: 5rem;
   border-style: none;
   color: var(--color-extralight);
   font-weight: 500;
@@ -121,17 +122,16 @@ button {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin: 3rem 0rem 2rem 0rem;
+  margin: 2rem 0rem 2rem 0rem;
 }
 
-.next-btn,
 .back-btn {
-  border-radius: 5rem;
   padding: 1.25rem 2.5rem;
 }
 
 .next-btn {
   background-color: var(--color-semibold);
+  padding: 1.25rem 5rem;
 }
 
 .back-btn {

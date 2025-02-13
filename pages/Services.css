@@ -4,7 +4,7 @@
   padding: 1.5rem;
 }
 
-.services-form {
+.services-selection {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;

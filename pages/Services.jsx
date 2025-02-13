@@ -1,6 +1,6 @@
 import data from "../src/services.js";
 import ServiceCard from "../components/Services/ServiceCard.jsx";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useContext } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import "./Services.css";
@@ -9,6 +9,13 @@ export default function Services() {
   const services = data.map((dog) => {
     return <ServiceCard key={dog.id} {...dog} />;
   });
+
+  const navigate = useNavigate();
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    navigate(`/confirmation`);
+  }
 
   const { scrollToTop } = useContext(ScrollContext);
 
@@ -20,13 +27,17 @@ export default function Services() {
         <h1 className="animate__animated animate__flipInX">
           Choose a service <span className="required">(required)</span>
         </h1>
-        <form className="services-form">{services}</form>
+        <form className="services-form" onSubmit={handleSubmit}>
+          <div className="services-selection"> {services}</div>
+          <div className="services directional-btn-container">
+            <button type="submit" className="services next-btn">
+              Next
+            </button>
+          </div>
+        </form>
         <div className="services directional-btn-container">
           <Link to="/">
             <button className="services back-btn">Back</button>
-          </Link>
-          <Link to="/confirmation">
-            <button className="services next-btn">Next</button>
           </Link>
         </div>
       </div>
