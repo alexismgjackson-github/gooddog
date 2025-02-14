@@ -4,6 +4,10 @@
   padding: 1.5rem;
 }
 
+.service-card:hover {
+  cursor: pointer;
+}
+
 .service-card-header {
   align-items: center;
   display: flex;

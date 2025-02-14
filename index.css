@@ -6,7 +6,7 @@
   --color-medium: #ada499;
   --color-semibold: #013220;
   --color-bold: #1b130e;
-  --color-extrabold: #000000;
+  --color-extrabold: #000;
   --color-highlight: #e86100;
 }
 
@@ -80,27 +80,25 @@ a:hover {
   cursor: pointer;
 }
 
-input,
-textarea {
+input {
+  border: 0.05rem solid var(--color-bold);
+  border-radius: 0.75rem;
   color: var(--color-bold);
   font-family: var(--font-primary);
-}
-
-input,
-select {
-  border-radius: 0.75rem;
-}
-
-input {
-  border: 0.1rem solid var(--color-bold);
   padding: 1rem;
   margin-bottom: 1.5rem;
 }
 
+input[type="text"],
+input[type="date"] {
+  outline: 0.1rem solid var(--color-bold);
+  transition: none;
+}
+
 input[type="text"]:focus,
 input[type="date"]:focus {
-  outline: 2px solid var(--color-highlight);
-  transition: 0.25s;
+  outline: 0.1rem solid var(--color-highlight);
+  transition: none;
 }
 
 input[type="radio"] {
