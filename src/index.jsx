@@ -9,6 +9,7 @@ import NextSteps from "../pages/NextSteps";
 import { ScrollProvider } from "../Context/scroll";
 import { FormProvider } from "../Context/form";
 import { RadioProvider } from "../Context/radio";
+import "/index.css";
 
 function App() {
   return (
