@@ -49,6 +49,10 @@
   padding: 1.25rem 2.5rem;
 }
 
+hr {
+  border: 0.1rem solid var(--color-light);
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .next-steps-container {

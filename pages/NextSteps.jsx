@@ -83,10 +83,8 @@ export default function NextSteps() {
               <span className="bold highlight">{breedTypeRadioValue}</span>
             </li>
             <li>
-              Service:{" "}
-              <span className="bold highlight">
-                {servicesRadioValue} an hour
-              </span>
+              Service & Hourly Rate:{" "}
+              <span className="bold highlight">{servicesRadioValue}</span>
             </li>
             <li>
               Phone Number:{" "}
@@ -101,6 +99,7 @@ export default function NextSteps() {
               <span className="bold highlight"> {formData.apptDate}</span>{" "}
             </li>
           </ul>
+          <hr />
           <p>
             Hello {formData.firstName}! Thank you for booking with us today!
             <span className="bold"> Gooddog Grooming Services</span> will follow
@@ -117,20 +116,21 @@ export default function NextSteps() {
             We look forward to speaking with you and meeting {formData.dogName}{" "}
             very soon!
           </p>
-          <div className="random-dog-container">
-            {" "}
-            <img className="random-dog-img" src={imageSource} alt="" />
-          </div>
-          <div className="next-steps-btn-container">
-            <button className="surprise-me-btn" onClick={generateRandomUrl}>
-              Surprise Me
+          <hr />
+        </div>
+        <div className="random-dog-container">
+          {" "}
+          <img className="random-dog-img" src={imageSource} alt="" />
+        </div>
+        <div className="next-steps-btn-container">
+          <button className="surprise-me-btn" onClick={generateRandomUrl}>
+            Surprise Me
+          </button>
+          <Link to="/">
+            <button className="next-steps next-btn">
+              Book Another Appointment
             </button>
-            <Link to="/">
-              <button className="next-steps next-btn">
-                Book Another Appointment
-              </button>
-            </Link>
-          </div>
+          </Link>
         </div>
       </div>
     </>
