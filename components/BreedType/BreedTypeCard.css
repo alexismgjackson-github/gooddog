@@ -1,5 +1,6 @@
 .breed-type-card {
   background-color: var(--color-extralight);
+  border: 0.1rem solid var(--color-medium);
   border-radius: 1rem;
   padding: 1.5rem;
 }

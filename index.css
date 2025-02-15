@@ -28,7 +28,8 @@ html:focus-within {
 }
 
 body {
-  background-color: var(--color-extralight);
+  background-color: var(--color-light);
+  color: var(--color-bold);
   font-family: var(--font-primary);
 }
 
@@ -80,8 +81,8 @@ a:hover {
 }
 
 input {
-  border: 0.05rem solid var(--color-bold);
   border-radius: 0.75rem;
+  border-style: none;
   color: var(--color-bold);
   font-family: var(--font-primary);
   padding: 1rem;
@@ -90,7 +91,7 @@ input {
 
 input[type="text"],
 input[type="date"] {
-  outline: 0.1rem solid var(--color-bold);
+  outline: 0.1rem solid var(--color-medium);
   transition: none;
 }
 
@@ -102,10 +103,6 @@ input[type="date"]:focus {
 
 input[type="radio"] {
   accent-color: var(--color-highlight);
-}
-
-label {
-  color: var(--color-extralight);
 }
 
 button {
@@ -132,18 +129,14 @@ button:hover {
 }
 
 .back-btn {
-  color: var(--color-semibold);
+  background-color: var(--color-extrabold);
   padding: 1.25rem 2.5rem;
 }
 
 .next-btn {
-  background-color: var(--color-highlight);
-  color: var(--color-semibold);
+  background-color: var(--color-semibold);
+  margin-top: 1rem;
   padding: 1.25rem 5rem;
-}
-
-.back-btn {
-  background-color: var(--color-medium);
 }
 
 li {

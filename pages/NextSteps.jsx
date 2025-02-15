@@ -69,6 +69,14 @@ export default function NextSteps() {
           <h3>Booking Summary</h3>
           <ul className="next-steps-list">
             <li>
+              Appointment Date:{" "}
+              <span className="bold highlight"> {formData.apptDate}</span>{" "}
+            </li>
+            <li>
+              Service & Hourly Rate:{" "}
+              <span className="bold highlight">{servicesRadioValue}</span>
+            </li>
+            <li>
               Dog's Name:{" "}
               <span className="bold highlight">{formData.dogName}</span>
             </li>
@@ -82,10 +90,7 @@ export default function NextSteps() {
               Breed Type:{" "}
               <span className="bold highlight">{breedTypeRadioValue}</span>
             </li>
-            <li>
-              Service & Hourly Rate:{" "}
-              <span className="bold highlight">{servicesRadioValue}</span>
-            </li>
+
             <li>
               Phone Number:{" "}
               <span className="bold highlight"> {formData.phone}</span>
@@ -93,10 +98,6 @@ export default function NextSteps() {
             <li>
               Email Address:{" "}
               <span className="bold highlight"> {formData.email}</span>
-            </li>
-            <li>
-              Appointment Date:{" "}
-              <span className="bold highlight"> {formData.apptDate}</span>{" "}
             </li>
           </ul>
           <hr />
@@ -107,9 +108,11 @@ export default function NextSteps() {
             <span className="bold"> FREE 15-min Discovery Call.</span>
           </p>
           <p>
-            We want to learn more about {formData.dogName} (e.g. temperament,
-            medical history, physical condition, favorite treats) so we can
-            provide them with the{" "}
+            <span className="bold">
+              We want to learn more about {formData.dogName}
+            </span>{" "}
+            (e.g. temperament, medical history, physical condition, favorite
+            treats) so we can provide them with the{" "}
             <span className="bold">best tailored service.</span>
           </p>
           <p>

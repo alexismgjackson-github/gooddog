@@ -1,11 +1,7 @@
 .services-container {
-  background-color: var(--color-semibold);
+  background-color: var(--color-extralight);
   border-radius: 1rem;
   padding: 1.5rem;
-}
-
-.services-container h1 {
-  color: var(--color-extralight);
 }
 
 .services-selection {
