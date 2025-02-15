@@ -1,7 +1,11 @@
 .confirmation-container {
-  background-color: var(--color-extralight);
+  background-color: var(--color-semibold);
   border-radius: 1rem;
   padding: 1.5rem;
+}
+
+.confirmation-container h1 {
+  color: var(--color-extralight);
 }
 
 .confirmation-form {

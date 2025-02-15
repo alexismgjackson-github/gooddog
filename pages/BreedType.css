@@ -1,7 +1,11 @@
 .breedtype-container {
-  background-color: var(--color-extralight);
+  background-color: var(--color-semibold);
   border-radius: 1rem;
   padding: 1.5rem;
+}
+
+.breedtype-container h1 {
+  color: var(--color-extralight);
 }
 
 .breedtype-selection {

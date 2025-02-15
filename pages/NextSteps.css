@@ -17,6 +17,11 @@
   margin: 1rem 0rem 2rem 0rem;
 }
 
+.next-steps.next-btn {
+  background-color: var(--color-semibold);
+  color: var(--color-extralight);
+}
+
 .next-steps {
   display: grid;
   gap: 2rem;
@@ -43,7 +48,7 @@
 }
 
 .surprise-me-btn {
-  background-color: var(--color-bold);
+  background-color: var(--color-highlight);
   border-radius: 5rem;
   margin-bottom: 0.5rem;
   padding: 1.25rem 2.5rem;
