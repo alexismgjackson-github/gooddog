@@ -16,6 +16,15 @@ export default function Confirmation() {
 
   const navigate = useNavigate();
 
+  /*const emailInput = document.getElementById("firstName");
+  emailInput.addEventListener("input", () => {
+    if (emailInput.validity.typeMismatch) {
+      emailInput.setCustomValidity("Please enter a valid email address.");
+    } else {
+      emailInput.setCustomValidity(""); // Clear message once valid
+    }
+  });*/
+
   function handleSubmit(event) {
     event.preventDefault();
     updateFormData({ firstName, lastName, dogName, email, apptDate, phone });

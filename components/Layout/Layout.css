@@ -5,13 +5,13 @@ main {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   main {
-    padding: 2rem 15rem;
+    padding: 2rem 5rem;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   main {
-    padding: 2rem 20rem;
+    padding: 2rem 15rem;
   }
 }

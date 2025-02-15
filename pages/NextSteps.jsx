@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useState, useContext } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import { FormContext } from "../Context/form.jsx";
@@ -44,6 +44,13 @@ export default function NextSteps() {
     const randomIndex = Math.floor(Math.random() * imageUrls.length);
     setImageSource(imageUrls[randomIndex]);
   };
+
+  const navigate = useNavigate();
+
+  function handleClick(event) {
+    event.preventDefault();
+    navigate(`/`);
+  }
 
   const { scrollToTop } = useContext(ScrollContext);
 
@@ -129,11 +136,10 @@ export default function NextSteps() {
           <button className="surprise-me-btn" onClick={generateRandomUrl}>
             Surprise Me
           </button>
-          <Link to="/">
-            <button className="next-steps next-btn">
-              Book Another Appointment
-            </button>
-          </Link>
+
+          <button className="next-steps next-btn" onClick={handleClick}>
+            Book Another Appointment
+          </button>
         </div>
       </div>
     </>
