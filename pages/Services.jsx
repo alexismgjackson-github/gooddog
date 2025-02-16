@@ -12,8 +12,7 @@ export default function Services() {
 
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit() {
     navigate(`/confirmation`);
   }
 
@@ -27,7 +26,7 @@ export default function Services() {
         <h1 className="animate__animated animate__flipInX">
           Choose a service <span className="required">(required)</span>
         </h1>
-        <form className="services-form" onSubmit={handleSubmit}>
+        <form className="services-form" action={handleSubmit}>
           <div className="services-selection"> {services}</div>
           <div className="services directional-btn-container">
             <button type="submit" className="services next-btn">

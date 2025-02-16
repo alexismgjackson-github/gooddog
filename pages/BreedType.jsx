@@ -13,8 +13,7 @@ export default function BreedType() {
 
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit() {
     navigate(`/services`);
   }
 
@@ -28,7 +27,7 @@ export default function BreedType() {
         <h1 className="animate__animated animate__flipInX">
           Select a breed type <span className="required">(required)</span>
         </h1>
-        <form className="breedtype-form" onSubmit={handleSubmit}>
+        <form className="breedtype-form" action={handleSubmit}>
           <div className="breedtype-selection">{dogBreedTypes}</div>
           <div className="breedtype directional-btn-container">
             <button type="submit" className="breedtype next-btn">

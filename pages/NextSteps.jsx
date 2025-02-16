@@ -47,8 +47,7 @@ export default function NextSteps() {
 
   const navigate = useNavigate();
 
-  function handleClick(event) {
-    event.preventDefault();
+  function handleClick() {
     navigate(`/`);
   }
 
