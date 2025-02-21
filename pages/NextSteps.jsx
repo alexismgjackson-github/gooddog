@@ -132,11 +132,19 @@ export default function NextSteps() {
           <img className="random-dog-img" src={imageSource} alt="" />
         </div>
         <div className="next-steps-btn-container">
-          <button className="surprise-me-btn" onClick={generateRandomUrl}>
+          <button
+            className="surprise-me-btn"
+            onClick={generateRandomUrl}
+            aria-label="Surprise me with doggies"
+          >
             Surprise Me
           </button>
 
-          <button className="next-steps next-btn" onClick={handleClick}>
+          <button
+            className="next-steps next-btn"
+            onClick={handleClick}
+            aria-label="Book another appointment"
+          >
             Book Another Appointment
           </button>
         </div>

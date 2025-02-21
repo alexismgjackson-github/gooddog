@@ -29,14 +29,23 @@ export default function Services() {
         <form className="services-form" action={handleSubmit}>
           <div className="services-selection"> {services}</div>
           <div className="services directional-btn-container">
-            <button type="submit" className="services next-btn">
+            <button
+              type="submit"
+              className="services next-btn"
+              aria-label="Proceed to confirmation form"
+            >
               Next
             </button>
           </div>
         </form>
         <div className="services directional-btn-container">
           <Link to="/">
-            <button className="services back-btn">Back</button>
+            <button
+              className="services back-btn"
+              aria-label="Go back to breed types"
+            >
+              Back
+            </button>
           </Link>
         </div>
       </div>

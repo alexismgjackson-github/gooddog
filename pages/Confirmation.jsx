@@ -117,7 +117,11 @@ export default function Confirmation() {
             onChange={(event) => setApptDate(event.target.value)}
             required
           />
-          <button type="submit" className="confirmation next-btn">
+          <button
+            type="submit"
+            className="confirmation next-btn"
+            aria-label="Submit form details"
+          >
             Submit
           </button>
         </form>

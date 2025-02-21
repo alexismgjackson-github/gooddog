@@ -30,7 +30,11 @@ export default function BreedType() {
         <form className="breedtype-form" action={handleSubmit}>
           <div className="breedtype-selection">{dogBreedTypes}</div>
           <div className="breedtype directional-btn-container">
-            <button type="submit" className="breedtype next-btn">
+            <button
+              type="submit"
+              className="breedtype next-btn"
+              aria-label="Proceed to dog grooming services"
+            >
               Next
             </button>
           </div>
