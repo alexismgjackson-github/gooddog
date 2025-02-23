@@ -29,7 +29,7 @@ export default function Confirmation() {
     <>
       <div className="confirmation-container">
         <h1 className="animate__animated animate__flipInX">Confirm booking</h1>
-        <form className="confirmation-form" onSubmit={handleSubmit}>
+        <form className="confirmation-form" action={handleSubmit}>
           <label htmlFor="firstName">
             Owner's First Name <span className="required">(required)</span>
           </label>
@@ -112,9 +112,9 @@ export default function Confirmation() {
           <input
             type="date"
             value={apptDate}
+            onChange={(event) => setApptDate(event.target.value)}
             name="apptDate"
             id="apptDate"
-            onChange={(event) => setApptDate(event.target.value)}
             required
           />
           <button
