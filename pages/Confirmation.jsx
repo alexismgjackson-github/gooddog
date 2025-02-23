@@ -29,7 +29,7 @@ export default function Confirmation() {
     <>
       <div className="confirmation-container">
         <h1 className="animate__animated animate__flipInX">Confirm booking</h1>
-        <form className="confirmation-form" action={handleSubmit}>
+        <form className="confirmation-form" onSubmit={handleSubmit}>
           <label htmlFor="firstName">
             Owner's First Name <span className="required">(required)</span>
           </label>
