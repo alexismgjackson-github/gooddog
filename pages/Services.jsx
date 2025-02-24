@@ -6,8 +6,8 @@ import { ScrollContext } from "../Context/scroll.jsx";
 import "./Services.css";
 
 export default function Services() {
-  const services = data.map((dog) => {
-    return <ServiceCard key={dog.id} {...dog} />;
+  const services = data.map((service) => {
+    return <ServiceCard key={service.id} {...service} />;
   });
 
   const navigate = useNavigate();
