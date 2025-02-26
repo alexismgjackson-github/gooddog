@@ -19,7 +19,7 @@ Gooddog is a fully responsive app allows the user to book an appointment with a 
 
 ## WHY I BUILT THIS
 
-I wanted to build project that was a booking system of some sort. Ultimately, I decided to go with creating a dog grooming booking system after finding several beautiful images of dogs on the Unsplash site.
+I wanted to build a booking system of some sort. Ultimately, I decided to go with creating a dog grooming booking system after finding several beautiful images of dogs on the Unsplash site.
 
 ## WHAT I LEARNED
 
