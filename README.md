@@ -29,6 +29,9 @@ I wanted to build project that was a booking system of some sort. Ultimately, I 
 
 ### _EXPORTING/IMPORTING DATA_
 
+- Using named imports and setting type="module" in the script tag
+- Using map to iterate over the array of objects
+
 ### _USESTATE_
 
 - Form validation
