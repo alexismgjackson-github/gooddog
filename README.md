@@ -6,6 +6,8 @@ Gooddog is a fully responsive app allows the user to book an appointment with a 
 
 - Input Radios
 - Contact Form
+- Dog Image Generator
+- Animations
 
 ## TECHNOLOGIES
 
@@ -13,6 +15,7 @@ Gooddog is a fully responsive app allows the user to book an appointment with a 
 - React
 - Coolors Color Tool
 - Google Fonts & Icons
+- Animate.css
 
 ## WHY I BUILT THIS
 
@@ -59,7 +62,7 @@ I wanted to build project that was a booking system of some sort. Ultimately, I 
 
 ## MOST CHALLENGING
 
-- Cart Functionality
+- Form input's data persistence
 
 ## BUGS
 
