@@ -1,6 +1,6 @@
 # _GOODDOG - DOG GROOMING BOOKING SYSTEM_
 
-Gooddog is a fully responsive app allows the user to book an appointment with a fictional dog grooming company.
+Gooddog is a fully responsive app thats allows the user to book an appointment with a fictional dog grooming company.
 
 ## FEATURES
 
