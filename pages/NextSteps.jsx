@@ -40,6 +40,8 @@ export default function NextSteps() {
 
   const [imageSource, setImageSource] = useState("");
 
+  // generating a random dog image from array of urls
+
   const generateRandomUrl = () => {
     const randomIndex = Math.floor(Math.random() * imageUrls.length);
     setImageSource(imageUrls[randomIndex]);
@@ -129,7 +131,11 @@ export default function NextSteps() {
         </div>
         <div className="random-dog-container">
           {" "}
-          <img className="random-dog-img" src={imageSource} alt="" />
+          <img
+            className="random-dog-img"
+            src={imageSource}
+            alt="Random cute dog"
+          />
         </div>
         <div className="next-steps-btn-container">
           <button

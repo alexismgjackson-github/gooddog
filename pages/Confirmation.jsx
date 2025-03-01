@@ -7,6 +7,8 @@ import "./Confirmation.css";
 export default function Confirmation() {
   const { updateFormData } = useContext(FormContext);
 
+  // initialize the state variables of the confirmation's form data with empty strings
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [dogName, setDogName] = useState("");
@@ -15,6 +17,8 @@ export default function Confirmation() {
   const [phone, setPhone] = useState("");
 
   const navigate = useNavigate();
+
+  // updating state of confirmation's form data and navigating to next page
 
   function handleSubmit() {
     updateFormData({ firstName, lastName, dogName, email, apptDate, phone });
@@ -127,7 +131,12 @@ export default function Confirmation() {
         </form>
         <div className="confirmation directional-btn-container">
           <Link to="/services">
-            <button className="confirmation back-btn">Back</button>
+            <button
+              className="confirmation back-btn"
+              aria-label="Back to grooming services"
+            >
+              Back
+            </button>
           </Link>
         </div>
       </div>
