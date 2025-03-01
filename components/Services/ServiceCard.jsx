@@ -8,6 +8,7 @@ export default function ServiceCard(service) {
   const handleChange = (event) => {
     updateServicesRadioValue(event.target.value);
   };
+
   return (
     <>
       <label>
