@@ -131,11 +131,7 @@ export default function NextSteps() {
         </div>
         <div className="random-dog-container">
           {" "}
-          <img
-            className="random-dog-img"
-            src={imageSource}
-            alt="Random cute dog"
-          />
+          <img className="random-dog-img" src={imageSource} alt="" />
         </div>
         <div className="next-steps-btn-container">
           <button
