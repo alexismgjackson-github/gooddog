@@ -5,6 +5,8 @@ import "./ServiceCard.css";
 export default function ServiceCard(service) {
   const { updateServicesRadioValue } = useContext(RadioContext);
 
+  // updates the context value when a user interacts with the radio buttons
+
   const handleChange = (event) => {
     updateServicesRadioValue(event.target.value);
   };

@@ -5,6 +5,8 @@ import "./BreedTypeCard.css";
 export default function BreedTypeCard(dog) {
   const { updateBreedTypeRadioValue } = useContext(RadioContext);
 
+  // updates the context value when a user interacts with the radio buttons
+
   const handleChange = (event) => {
     updateBreedTypeRadioValue(event.target.value);
   };
