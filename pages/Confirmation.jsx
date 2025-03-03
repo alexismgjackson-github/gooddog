@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import { FormContext } from "../Context/form.jsx";
 import "./Confirmation.css";
@@ -15,6 +15,7 @@ export default function Confirmation() {
   const [email, setEmail] = useState("");
   const [apptDate, setApptDate] = useState("");
   const [phone, setPhone] = useState("");
+  const [minDate, setMinDate] = useState("");
 
   const navigate = useNavigate();
 
@@ -28,6 +29,14 @@ export default function Confirmation() {
   const { scrollToTop } = useContext(ScrollContext);
 
   scrollToTop();
+
+  // calculates today's date, setting it as the minimum allowable date for the input field
+
+  useEffect(() => {
+    const today = new Date();
+    const formattedDate = today.toISOString().split("T")[0]; // Get date part only (YYYY-MM-DD)
+    setMinDate(formattedDate);
+  }, []);
 
   return (
     <>
@@ -119,6 +128,7 @@ export default function Confirmation() {
             onChange={(event) => setApptDate(event.target.value)}
             name="apptDate"
             id="apptDate"
+            min={minDate}
             required
           />
           <button
