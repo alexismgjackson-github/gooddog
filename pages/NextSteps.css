@@ -63,6 +63,13 @@ hr {
   .next-steps-container {
     padding: 2rem;
   }
+  .next-steps {
+    gap: 3rem;
+  }
+  .random-dog-img {
+    margin: 3rem 0rem;
+    max-width: 70%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
