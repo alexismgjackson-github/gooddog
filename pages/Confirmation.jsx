@@ -30,7 +30,7 @@ export default function Confirmation() {
 
   scrollToTop();
 
-  // calculates today's date, setting it as the minimum allowable date for the input field
+  // calculate today's date, setting it as the minimum allowable date for the input field
 
   useEffect(() => {
     const today = new Date();

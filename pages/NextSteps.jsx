@@ -40,7 +40,7 @@ export default function NextSteps() {
 
   const [imageSource, setImageSource] = useState("");
 
-  // generating a random dog image from array of urls
+  // generate a random dog image from array of urls
 
   const generateRandomUrl = () => {
     const randomIndex = Math.floor(Math.random() * imageUrls.length);
