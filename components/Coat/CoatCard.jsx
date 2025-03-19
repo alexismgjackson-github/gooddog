@@ -14,12 +14,12 @@ export default function CoatCard(coat) {
   return (
     <>
       <label>
-        <div className="service-card-container">
-          <div className="service-card">
-            <div className="service-card-header">
+        <div className="coat-card-container">
+          <div className="coat-card">
+            <div className="coat-card-header">
               <input
                 type="radio"
-                name="service-radio"
+                name="coat-radio"
                 id={coat.id}
                 value={coat.name}
                 onChange={handleChange}

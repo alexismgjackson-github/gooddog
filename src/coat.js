@@ -3,13 +3,13 @@ export default [
     id: 1,
     name: "Short/Smooth",
     description:
-      "With this dog coat type, the hair that lies close to the body, the coat is sleek and shiny, almost like the dog is covered with silky skin rather than fur.",
+      "With this dog coat type, the hair lies close to the body, the coat is sleek and shiny.",
   },
   {
     id: 2,
     name: "Medium",
     description:
-      "With this dog coat type, the fur may stand slightly off the body, which could give a fluffier appearance.",
+      "With this dog coat type, the hair may stand slightly off the body, which could give a fluffier appearance.",
   },
   {
     id: 3,
@@ -21,13 +21,13 @@ export default [
     id: 4,
     name: "Wire",
     description:
-      "With this dog coat type, the wiry outer layer of rough hair feels quite different than the soft silkiness of a smooth coat.",
+      "With this dog coat type, there is a wiry outer layer of rough hair.",
   },
   {
     id: 5,
     name: "Curly",
     description:
-      "With this dog coat type, it can range from soft waves to tight curls.",
+      "With this dog coat type, the hair can range from soft waves to tight curls.",
   },
   {
     id: 6,
