@@ -143,7 +143,7 @@ export default function Confirmation() {
           <Link to="/services">
             <button
               className="confirmation back-btn"
-              aria-label="Back to grooming services"
+              aria-label="Back to dog sizes"
             >
               Back
             </button>

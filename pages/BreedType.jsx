@@ -33,7 +33,7 @@ export default function BreedType() {
             <button
               type="submit"
               className="breedtype next-btn"
-              aria-label="Proceed to dog grooming services"
+              aria-label="Proceed to services"
             >
               Next
             </button>
