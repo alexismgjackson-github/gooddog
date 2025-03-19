@@ -9,6 +9,7 @@ export const FormProvider = ({ children }) => {
 
   const updateFormData = (data) => {
     setFormData(data);
+    console.log(data);
   };
 
   return (

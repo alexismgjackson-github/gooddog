@@ -50,7 +50,7 @@ export default function NextSteps() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate(`/`);
+    navigate("/");
   }
 
   const { scrollToTop } = useContext(ScrollContext);
@@ -131,7 +131,7 @@ export default function NextSteps() {
         </div>
         <div className="random-dog-container">
           {" "}
-          <img className="random-dog-img" src={imageSource} alt="" />
+          <img className="random-dog-img" src={imageSource || null} alt="" />
         </div>
         <div className="next-steps-btn-container">
           <button
