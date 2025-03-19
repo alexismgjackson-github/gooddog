@@ -13,7 +13,7 @@ export default function Services() {
   const navigate = useNavigate();
 
   function handleSubmit() {
-    navigate(`/confirmation`);
+    navigate(`/coat`);
   }
 
   const { scrollToTop } = useContext(ScrollContext);
@@ -27,12 +27,12 @@ export default function Services() {
           Choose a service <span className="required">(required)</span>
         </h1>
         <form className="services-form" action={handleSubmit}>
-          <div className="services-selection"> {services}</div>
+          <div className="services-selection">{services}</div>
           <div className="services directional-btn-container">
             <button
               type="submit"
               className="services next-btn"
-              aria-label="Proceed to confirmation form"
+              aria-label="Proceed to coat types"
             >
               Next
             </button>

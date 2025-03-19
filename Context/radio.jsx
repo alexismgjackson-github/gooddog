@@ -7,6 +7,10 @@ export const RadioProvider = ({ children }) => {
 
   const [servicesRadioValue, setServicesRadioValue] = useState(""); // initialize the state variable "servicesRadioValue" with empty string
 
+  const [coatTypeRadioValue, setCoatTypeRadioValue] = useState(""); // initialize the state variable "coatTypeRadioValue" with empty string
+
+  const [sizeRadioValue, setSizeRadioValue] = useState(""); // initialize the state variable "sizeRadioValue" with empty string
+
   // update the "setBreedTypeRadioValue" value by passing in a value (string)
 
   const updateBreedTypeRadioValue = (value) => {
@@ -21,13 +25,31 @@ export const RadioProvider = ({ children }) => {
     console.log(value);
   };
 
+  // update the "setBreedTypeRadioValue" value by passing in a value (string)
+
+  const updateCoatTypeRadioValue = (value) => {
+    setCoatTypeRadioValue(value);
+    console.log(value);
+  };
+
+  // update the "setServicesRadioValue" value by passing in a value (string)
+
+  const updateSizeRadioValue = (value) => {
+    setSizeRadioValue(value);
+    console.log(value);
+  };
+
   return (
     <RadioContext.Provider
       value={{
         breedTypeRadioValue,
         servicesRadioValue,
+        coatTypeRadioValue,
+        sizeRadioValue,
         updateBreedTypeRadioValue,
         updateServicesRadioValue,
+        updateCoatTypeRadioValue,
+        updateSizeRadioValue,
       }}
     >
       {children}

@@ -1,0 +1,30 @@
+.coat-card {
+  background-color: var(--color-extralight);
+  border: 0.1rem solid var(--color-medium);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.coat-card:hover {
+  cursor: pointer;
+}
+
+.coat-card-header {
+  align-items: center;
+  display: flex;
+}
+
+.coat-card h2 {
+  font-style: italic;
+  margin-left: 1.5rem;
+}
+
+.coat-card p {
+  color: #737373;
+  margin-top: 1rem;
+}
+
+.coat-card span {
+  font-size: 1.4rem;
+  font-style: italic;
+}

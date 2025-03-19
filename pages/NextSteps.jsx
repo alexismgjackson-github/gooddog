@@ -8,7 +8,12 @@ import "./NextSteps.css";
 export default function NextSteps() {
   const { formData } = useContext(FormContext);
 
-  const { breedTypeRadioValue, servicesRadioValue } = useContext(RadioContext);
+  const {
+    breedTypeRadioValue,
+    servicesRadioValue,
+    coatTypeRadioValue,
+    sizeRadioValue,
+  } = useContext(RadioContext);
 
   const imageUrls = [
     "/assets/images/randomURL1.jpg",
@@ -98,7 +103,14 @@ export default function NextSteps() {
               Breed Type:{" "}
               <span className="bold highlight">{breedTypeRadioValue}</span>
             </li>
-
+            <li>
+              Coat Type:{" "}
+              <span className="bold highlight">{coatTypeRadioValue}</span>
+            </li>
+            <li>
+              Size (Weight):{" "}
+              <span className="bold highlight">{sizeRadioValue}</span>
+            </li>
             <li>
               Phone Number:{" "}
               <span className="bold highlight"> {formData.phone}</span>
