@@ -39,7 +39,7 @@ export default function Size() {
           </div>
         </form>
         <div className="size directional-btn-container">
-          <Link to="/">
+          <Link to="/coat">
             <button
               className="size back-btn"
               aria-label="Go back to coat types"

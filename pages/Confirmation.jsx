@@ -140,7 +140,7 @@ export default function Confirmation() {
           </button>
         </form>
         <div className="confirmation directional-btn-container">
-          <Link to="/services">
+          <Link to="/size">
             <button
               className="confirmation back-btn"
               aria-label="Back to dog sizes"
