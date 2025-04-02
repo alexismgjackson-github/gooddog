@@ -15,28 +15,28 @@ export const RadioProvider = ({ children }) => {
 
   const updateBreedTypeRadioValue = (value) => {
     setBreedTypeRadioValue(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // update the "setServicesRadioValue" value by passing in a value (string)
 
   const updateServicesRadioValue = (value) => {
     setServicesRadioValue(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // update the "setBreedTypeRadioValue" value by passing in a value (string)
 
   const updateCoatTypeRadioValue = (value) => {
     setCoatTypeRadioValue(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // update the "setServicesRadioValue" value by passing in a value (string)
 
   const updateSizeRadioValue = (value) => {
     setSizeRadioValue(value);
-    console.log(value);
+    // console.log(value);
   };
 
   return (
