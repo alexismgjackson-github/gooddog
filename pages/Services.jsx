@@ -1,7 +1,7 @@
 import data from "../src/services.js";
 import ServiceCard from "../components/Services/ServiceCard.jsx";
 import { Link, useNavigate } from "react-router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import "./Services.css";
 
@@ -10,15 +10,21 @@ export default function Services() {
     return <ServiceCard key={service.id} {...service} />;
   });
 
+  // navigates to the next page
+
   const navigate = useNavigate();
 
   function handleSubmit() {
     navigate(`/coat`);
   }
 
+  // scrolls the page to the top
+
   const { scrollToTop } = useContext(ScrollContext);
 
-  scrollToTop();
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>

@@ -19,18 +19,24 @@ export default function Confirmation() {
 
   const navigate = useNavigate();
 
-  // updating state of confirmation's form data and navigating to next page
+  // updates state of confirmation's form data, persists data to LocalStorage and navigates to next page
 
   function handleSubmit() {
-    updateFormData({ firstName, lastName, dogName, email, apptDate, phone });
+    const data = { firstName, lastName, dogName, email, apptDate, phone };
+    updateFormData(data); // update context
+    localStorage.setItem("formData", JSON.stringify(data)); // save to localStorage
     navigate(`/nextsteps`);
   }
 
+  // scrolls the page to the top
+
   const { scrollToTop } = useContext(ScrollContext);
 
-  scrollToTop();
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
-  // calculate today's date, setting it as the minimum allowable date for the input field
+  // calculates today's date, setting it as the minimum allowable date for the input field
 
   useEffect(() => {
     const today = new Date();

@@ -1,7 +1,7 @@
 import data from "../src/breedtype.js";
 import BreedTypeCard from "../components/BreedType/BreedTypeCard.jsx";
 import { useNavigate } from "react-router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 
 import "./BreedType.css";
@@ -11,15 +11,21 @@ export default function BreedType() {
     return <BreedTypeCard key={dog.id} {...dog} />;
   });
 
+  // navigates to the next page
+
   const navigate = useNavigate();
 
   function handleSubmit() {
     navigate(`/services`);
   }
 
+  // scrolls the page to the top
+
   const { scrollToTop } = useContext(ScrollContext);
 
-  scrollToTop();
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import data from "../src/size.js";
 import SizeCard from "../components/Size/SizeCard.jsx";
 import { Link, useNavigate } from "react-router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import "./Size.css";
 
@@ -10,15 +10,21 @@ export default function Size() {
     return <SizeCard key={size.id} {...size} />;
   });
 
+  // navigates to the next page
+
   const navigate = useNavigate();
 
   function handleSubmit() {
     navigate(`/confirmation`);
   }
 
+  // scrolls the page to the top
+
   const { scrollToTop } = useContext(ScrollContext);
 
-  scrollToTop();
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>

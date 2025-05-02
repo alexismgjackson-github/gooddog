@@ -1,12 +1,27 @@
 import { useNavigate } from "react-router";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import { FormContext } from "../Context/form.jsx";
 import { RadioContext } from "../Context/radio.jsx";
 import "./NextSteps.css";
 
 export default function NextSteps() {
-  const { formData } = useContext(FormContext);
+  const formContext = useContext(FormContext);
+
+  const [formData, setFormData] = useState({});
+
+  useEffect(() => {
+    // use formData from context if available
+    if (formContext?.formData && Object.keys(formContext.formData).length > 0) {
+      setFormData(formContext.formData);
+    } else {
+      // else fallback to localStorage
+      const storedFormData = localStorage.getItem("formData");
+      if (storedFormData) {
+        setFormData(JSON.parse(storedFormData));
+      }
+    }
+  }, []);
 
   const {
     breedTypeRadioValue,
@@ -45,22 +60,32 @@ export default function NextSteps() {
 
   const [imageSource, setImageSource] = useState("");
 
-  // generate a random dog image from array of urls
+  // generates a random dog image from array of urls
 
   const generateRandomUrl = () => {
     const randomIndex = Math.floor(Math.random() * imageUrls.length);
     setImageSource(imageUrls[randomIndex]);
   };
 
+  // navigates to the next page
+
   const navigate = useNavigate();
 
+  // clears previous booking info & returns the user to the start page
+
   function handleClick() {
+    localStorage.removeItem("formData");
+    localStorage.removeItem("radioValues");
     navigate("/");
   }
 
+  // scrolls the page to the top
+
   const { scrollToTop } = useContext(ScrollContext);
 
-  scrollToTop();
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>

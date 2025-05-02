@@ -1,7 +1,7 @@
 import data from "../src/coat.js";
 import CoatCard from "../components/Coat/CoatCard.jsx";
 import { Link, useNavigate } from "react-router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollContext } from "../Context/scroll.jsx";
 import "./Coat.css";
 
@@ -10,15 +10,21 @@ export default function Coat() {
     return <CoatCard key={coat.id} {...coat} />;
   });
 
+  // navigates to the next page
+
   const navigate = useNavigate();
 
   function handleSubmit() {
     navigate(`/size`);
   }
 
+  // scrolls the page to the top
+
   const { scrollToTop } = useContext(ScrollContext);
 
-  scrollToTop();
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>
