@@ -13,6 +13,7 @@ Gooddog is a fully responsive app that allows the user to book an appointment wi
 
 - CSS
 - React
+- LocalStorage
 - Coolors Color Tool
 - Google Fonts & Icons
 - Animate.css
@@ -44,6 +45,10 @@ I wanted to build a booking system of some sort. Ultimately, I decided to go wit
 - Scroll To Top of page for better user experience
 - Clear form inputs of values when the user navigates
 - Preventing the user from selecting a date before today's date in the date picker
+
+### _LOCALSTORAGE_
+
+- Persist form data
 
 ### _RESPONSIVE WEB DESIGN_
 
