@@ -1,58 +1,62 @@
 import { createContext, useState } from "react";
 
+// Create a context for managing the radio button state across the app
 export const RadioContext = createContext();
 
+// RadioProvider component that wraps around other components to provide shared radio button state
 export const RadioProvider = ({ children }) => {
-  const [breedTypeRadioValue, setBreedTypeRadioValue] = useState(""); // initialize the state variable "breedTypeRadioValue" with empty string
+  // State for the selected breed type radio button, initialized to an empty string
+  const [breedTypeRadioValue, setBreedTypeRadioValue] = useState("");
 
-  const [servicesRadioValue, setServicesRadioValue] = useState(""); // initialize the state variable "servicesRadioValue" with empty string
+  // State for the selected services radio button, initialized to an empty string
+  const [servicesRadioValue, setServicesRadioValue] = useState("");
 
-  const [coatTypeRadioValue, setCoatTypeRadioValue] = useState(""); // initialize the state variable "coatTypeRadioValue" with empty string
+  // State for the selected coat type radio button, initialized to an empty string
+  const [coatTypeRadioValue, setCoatTypeRadioValue] = useState("");
 
-  const [sizeRadioValue, setSizeRadioValue] = useState(""); // initialize the state variable "sizeRadioValue" with empty string
+  // State for the selected size radio button, initialized to an empty string
+  const [sizeRadioValue, setSizeRadioValue] = useState("");
 
-  // updates the "setBreedTypeRadioValue" value by passing in a value (string)
-
+  // Function to update the breed type radio button value when a user selects a new option
   const updateBreedTypeRadioValue = (value) => {
-    setBreedTypeRadioValue(value);
-    // console.log(value);
+    setBreedTypeRadioValue(value); // Sets the selected breed type value
+    // Optional: console.log(value); // For debugging purposes, if you want to log the selected value
   };
 
-  // updates the "setServicesRadioValue" value by passing in a value (string)
-
+  // Function to update the services radio button value when a user selects a new option
   const updateServicesRadioValue = (value) => {
-    setServicesRadioValue(value);
-    // console.log(value);
+    setServicesRadioValue(value); // Sets the selected service value
+    // Optional: console.log(value); // For debugging purposes, if you want to log the selected value
   };
 
-  // updates the "setBreedTypeRadioValue" value by passing in a value (string)
-
+  // Function to update the coat type radio button value when a user selects a new option
   const updateCoatTypeRadioValue = (value) => {
-    setCoatTypeRadioValue(value);
-    // console.log(value);
+    setCoatTypeRadioValue(value); // Sets the selected coat type value
+    // Optional: console.log(value); // For debugging purposes, if you want to log the selected value
   };
 
-  // updates the "setServicesRadioValue" value by passing in a value (string)
-
+  // Function to update the size radio button value when a user selects a new option
   const updateSizeRadioValue = (value) => {
-    setSizeRadioValue(value);
-    // console.log(value);
+    setSizeRadioValue(value); // Sets the selected size value
+    // Optional: console.log(value); // For debugging purposes, if you want to log the selected value
   };
 
+  // Providing the context to children components so that they can access the state and functions
   return (
     <RadioContext.Provider
       value={{
-        breedTypeRadioValue,
-        servicesRadioValue,
-        coatTypeRadioValue,
-        sizeRadioValue,
-        updateBreedTypeRadioValue,
-        updateServicesRadioValue,
-        updateCoatTypeRadioValue,
-        updateSizeRadioValue,
+        breedTypeRadioValue, // The selected breed type value
+        servicesRadioValue, // The selected service value
+        coatTypeRadioValue, // The selected coat type value
+        sizeRadioValue, // The selected size value
+        updateBreedTypeRadioValue, // Function to update breed type radio value
+        updateServicesRadioValue, // Function to update services radio value
+        updateCoatTypeRadioValue, // Function to update coat type radio value
+        updateSizeRadioValue, // Function to update size radio value
       }}
     >
-      {children}
+      {children}{" "}
+      {/* Render child components that can now access the radio button states */}
     </RadioContext.Provider>
   );
 };

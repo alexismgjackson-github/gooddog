@@ -1,28 +1,31 @@
-import { useNavigate } from "react-router";
-import { useState, useContext, useEffect } from "react";
-import { ScrollContext } from "../Context/scroll.jsx";
-import { FormContext } from "../Context/form.jsx";
-import { RadioContext } from "../Context/radio.jsx";
-import "./NextSteps.css";
+// Importing required dependencies and components
+import { useNavigate } from "react-router"; // For navigation between pages
+import { useState, useContext, useEffect } from "react"; // React hooks for managing state and side effects
+import { ScrollContext } from "../Context/scroll.jsx"; // Custom context to handle scroll position
+import { FormContext } from "../Context/form.jsx"; // Custom context to manage form data
+import { RadioContext } from "../Context/radio.jsx"; // Custom context to handle selected radio button values
+import "./NextSteps.css"; // Importing custom styles for the next steps page
 
 export default function NextSteps() {
+  // Using FormContext to get form data
   const formContext = useContext(FormContext);
 
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({}); // Local state for form data
 
+  // Load form data from context or localStorage when the component mounts
   useEffect(() => {
-    // use formData from context if available
     if (formContext?.formData && Object.keys(formContext.formData).length > 0) {
-      setFormData(formContext.formData);
+      setFormData(formContext.formData); // Use form data from context
     } else {
-      // else fallback to localStorage
+      // Fallback to localStorage if no form data in context
       const storedFormData = localStorage.getItem("formData");
       if (storedFormData) {
         setFormData(JSON.parse(storedFormData));
       }
     }
-  }, []);
+  }, [formContext]);
 
+  // Getting radio button values from RadioContext
   const {
     breedTypeRadioValue,
     servicesRadioValue,
@@ -30,6 +33,7 @@ export default function NextSteps() {
     sizeRadioValue,
   } = useContext(RadioContext);
 
+  // Array of random dog image URLs
   const imageUrls = [
     "/assets/images/randomURL1.jpg",
     "/assets/images/randomURL2.jpg",
@@ -58,38 +62,37 @@ export default function NextSteps() {
     "/assets/images/randomURL25.jpg",
   ];
 
-  const [imageSource, setImageSource] = useState("");
+  const [imageSource, setImageSource] = useState(""); // Local state for the random dog image
 
-  // generates a random dog image from array of urls
-
+  // Function to generate a random dog image
   const generateRandomUrl = () => {
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
-    setImageSource(imageUrls[randomIndex]);
+    const randomIndex = Math.floor(Math.random() * imageUrls.length); // Generate random index
+    setImageSource(imageUrls[randomIndex]); // Set the random image URL
   };
 
-  // navigates to the next page
-
+  // navigate hook to move between pages
   const navigate = useNavigate();
 
-  // clears previous booking info & returns the user to the start page
-
+  // Function to handle the "Book Another Appointment" button click
   function handleClick() {
+    // Clear the form data from localStorage
     localStorage.removeItem("formData");
     localStorage.removeItem("radioValues");
+    // Navigate back to the start page
     navigate("/");
   }
 
-  // scrolls the page to the top
-
+  // scrollToTop from ScrollContext to scroll to the top of the page on mount
   const { scrollToTop } = useContext(ScrollContext);
 
   useEffect(() => {
-    scrollToTop();
+    scrollToTop(); // Ensures that the page scrolls to the top when the component mounts
   }, []);
 
   return (
     <>
       <div className="next-steps-container">
+        {/* Heading for the next steps page */}
         <h1 className="animate__animated animate__flipInX">
           Next Steps{" "}
           <img
@@ -103,12 +106,14 @@ export default function NextSteps() {
             className="next-steps-icon"
           />
         </h1>
+
+        {/* Booking Summary Section */}
         <div className="next-steps">
           <h3>Booking Summary</h3>
           <ul className="next-steps-list">
             <li>
               Appointment Date:{" "}
-              <span className="bold highlight"> {formData.apptDate}</span>{" "}
+              <span className="bold highlight">{formData.apptDate}</span>
             </li>
             <li>
               Service & Hourly Rate:{" "}
@@ -138,11 +143,11 @@ export default function NextSteps() {
             </li>
             <li>
               Phone Number:{" "}
-              <span className="bold highlight"> {formData.phone}</span>
+              <span className="bold highlight">{formData.phone}</span>
             </li>
             <li>
               Email Address:{" "}
-              <span className="bold highlight"> {formData.email}</span>
+              <span className="bold highlight">{formData.email}</span>
             </li>
           </ul>
           <hr />
@@ -166,14 +171,17 @@ export default function NextSteps() {
           </p>
           <hr />
         </div>
+
+        {/* Random Dog Image */}
         <div className="random-dog-container">
-          {" "}
           <img className="random-dog-img" src={imageSource || null} alt="" />
         </div>
+
+        {/* Buttons for further actions */}
         <div className="next-steps-btn-container">
           <button
             className="surprise-me-btn"
-            onClick={generateRandomUrl}
+            onClick={generateRandomUrl} // Calls the function to show a random dog image
             aria-label="Surprise me with doggies"
           >
             Surprise Me
@@ -181,7 +189,7 @@ export default function NextSteps() {
 
           <button
             className="next-steps next-btn"
-            onClick={handleClick}
+            onClick={handleClick} // Clears data and navigates back to the start page
             aria-label="Book another appointment"
           >
             Book Another Appointment
